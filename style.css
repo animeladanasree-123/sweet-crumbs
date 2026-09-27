@@ -1,0 +1,389 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fffaf5;
+    color: #3d2b24;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    font: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: min(1180px, 92%);
+    margin: auto;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 250, 245, 0.95);
+    border-bottom: 1px solid #ead8cc;
+    backdrop-filter: blur(12px);
+}
+
+.navbar {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo,
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #5b3328;
+}
+
+.logo b {
+    color: #b45f45;
+}
+
+.logo-icon {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    background: #f7ded1;
+    border-radius: 50%;
+    color: #b45f45;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-menu a {
+    position: relative;
+    font-size: 15px;
+    font-weight: 600;
+    color: #5f4a42;
+    transition: 0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: #b45f45;
+}
+
+.nav-menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    height: 2px;
+    background: #b45f45;
+    transition: 0.3s ease;
+}
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
+    width: 100%;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.order-link {
+    padding: 10px 18px;
+    border-radius: 30px;
+    background: #b45f45;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.order-link:hover {
+    transform: translateY(-2px);
+    background: #944a36;
+}
+
+.menu-btn {
+    display: none;
+    background: transparent;
+    color: #5b3328;
+    font-size: 24px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 13px 22px;
+    border-radius: 30px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn-primary {
+    background: #b45f45;
+    color: white;
+    box-shadow: 0 10px 25px rgba(180, 95, 69, 0.2);
+}
+
+.btn-primary:hover {
+    background: #944a36;
+}
+
+.btn-outline {
+    border: 1.5px solid #b45f45;
+    color: #b45f45;
+}
+
+.btn-outline:hover {
+    background: #b45f45;
+    color: white;
+}
+
+.btn-light {
+    background: white;
+    color: #8f4735;
+}
+
+
+/* =========================
+   COMMON SECTION
+========================= */
+
+section {
+    padding: 100px 0;
+}
+
+.section-label {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #b45f45;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 55px;
+}
+
+.section-heading h2,
+.about-content h2,
+.contact-text h2 {
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.15;
+    color: #4b2d24;
+}
+
+.section-heading p {
+    margin-top: 14px;
+    color: #7c645b;
+}
+
+h1 em,
+h2 em {
+    color: #b45f45;
+    font-family: Georgia, serif;
+    font-weight: 500;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: #3d251e;
+    color: #f7e9e1;
+    padding-top: 70px;
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    gap: 45px;
+    padding-bottom: 50px;
+}
+
+.footer-logo {
+    color: white;
+    margin-bottom: 16px;
+}
+
+.footer-brand p {
+    max-width: 320px;
+    color: #d8c0b6;
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.social-links a {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #b45f45;
+    border-color: #b45f45;
+    transform: translateY(-3px);
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links h3 {
+    color: white;
+    margin-bottom: 8px;
+}
+
+.footer-links a,
+.footer-links p {
+    color: #d8c0b6;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: #f2a58b;
+}
+
+.footer-links i {
+    margin-right: 8px;
+    color: #f2a58b;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.12);
+    padding: 20px 0;
+    text-align: center;
+    color: #c9aea3;
+    font-size: 14px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .footer-main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 78px;
+        left: 0;
+        width: 100%;
+        background: #fffaf5;
+        border-bottom: 1px solid #ead8cc;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        padding: 25px 4%;
+        gap: 22px;
+
+        display: none;
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .order-link {
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    section {
+        padding: 70px 0;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .logo-icon {
+        width: 38px;
+        height: 38px;
+    }
+
+}
